@@ -1,0 +1,65 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "rdgtauserslist",
+        "designer|userClassName": "RdgtaUsersList",
+        "emptyText": "Няма данни!",
+        "store": "RdgtaUsers"
+    },
+    "name": "MyList",
+    "designerId": "828da43d-78ad-4048-807a-b03357b644c0",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top"
+            },
+            "name": "MyToolbar2",
+            "designerId": "056d2879-530e-43ca-9dd0-9ce560599ad3",
+            "cn": [
+                {
+                    "type": "Ext.field.Search",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": true,
+                        "id": null,
+                        "itemId": null,
+                        "label": null
+                    },
+                    "name": "MySearchField1",
+                    "designerId": "fb9473b9-8ddb-410f-9c43-01d06948199a"
+                }
+            ]
+        },
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div><h1>{Titla} {Name} {Prezime} {Familia}</h1></div><div><p>{Dlagnost}, тел. {GSM}</p></div><div><p>{Email}</p></div"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "2acc004d-8028-4f9d-89a5-7f486848b6f3"
+        }
+    ]
+}

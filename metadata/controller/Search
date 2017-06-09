@@ -1,0 +1,275 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "Search"
+    },
+    "name": "MyController",
+    "designerId": "8ef4ad9d-a60b-4c40-9d16-ca7d58d6883d",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "searchbyname",
+                "selector": "#searchbyname"
+            },
+            "name": "searchbyname",
+            "designerId": "8e79ac94-bdc7-4083-b5b3-d1d30d048b0d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "searchbynumber",
+                "selector": "#searchbynumber"
+            },
+            "name": "searchbynumber",
+            "designerId": "6e5badb4-6b05-41a6-b387-1a300c393231"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchbyname",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onSearchByNameKeyup",
+                "implHandler": [
+                    "",
+                    "this.getApplication().getController('Func').searchByName('searchByName', textfield);",
+                    ""
+                ],
+                "name": "keyup"
+            },
+            "name": "onSearchByNameKeyup",
+            "designerId": "c0944f41-4a7a-45c8-ba39-671799c90f56"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "searchbynamelist",
+                "selector": "searchbynamelist"
+            },
+            "name": "searchbynamelist",
+            "designerId": "35424fe3-996d-4b32-94ce-750c488ca2c1"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchbynamelist",
+                "designer|targetType": "SearchByNameList",
+                "fn": "onSearchByNameListItemTap",
+                "implHandler": [
+                    "",
+                    "this.getApplication().getController('Func').callAndEmailFn(record);",
+                    ""
+                ],
+                "name": "itemtap"
+            },
+            "name": "onSearchByNameListItemTap",
+            "designerId": "d4e9c62e-6d60-4af2-8dc2-8be526bf2018"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchbynamelist",
+                "designer|targetType": "SearchByNameList",
+                "fn": "onSearchByNameListShow",
+                "implHandler": [
+                    "",
+                    "console.log('show serchbynamelist');",
+                    ""
+                ],
+                "name": "show"
+            },
+            "name": "onSearchByNameListShow",
+            "designerId": "985dc214-13e0-431a-9380-e8b416a87145"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "searchbynumberlist",
+                "selector": "searchbynumberlist"
+            },
+            "name": "searchbynumberlist",
+            "designerId": "f54b6c5f-97a7-4112-878f-70f17615197b"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchbynumberlist",
+                "designer|targetType": "SearchByNumberList",
+                "fn": "onSearchByNumberListShow",
+                "implHandler": [
+                    "console.log('show serchbynumberlist');"
+                ],
+                "name": "show"
+            },
+            "name": "onSearchByNumberListShow",
+            "designerId": "84487012-8012-4d01-91c1-b2d8496fd0d3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchbynamelist",
+                "designer|targetType": "SearchByNameList",
+                "fn": "onSearchByNameListActivate",
+                "implHandler": [
+                    "console.log('SearchByNameListActivate');"
+                ],
+                "name": "activate"
+            },
+            "name": "onSearchByNameListActivate",
+            "designerId": "d6b8f02e-2026-40fd-b4aa-ea5fa20d6f2c"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchbynumberlist",
+                "designer|targetType": "SearchByNameList",
+                "fn": "onSearchByNumberListActivate1",
+                "implHandler": [
+                    "console.log('SearchByNumberListActivate');"
+                ],
+                "name": "activate"
+            },
+            "name": "onSearchByNumberListActivate1",
+            "designerId": "89c9ed6c-7af8-4a8d-b100-9ef99e91cd9d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchbyname",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onSearchByNameClearicontap",
+                "implHandler": [
+                    "",
+                    "console.log('clearicontap');",
+                    ""
+                ],
+                "name": "clearicontap"
+            },
+            "name": "onSearchByNameClearicontap",
+            "designerId": "4c562a7b-6e15-47d0-87b1-70fa81a0d88a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchbynumber",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onSearchByNumberKeyup",
+                "implHandler": [
+                    "",
+                    "this.getApplication().getController('Func').searchByNumber('searchByNumber', textfield);",
+                    ""
+                ],
+                "name": "keyup"
+            },
+            "name": "onSearchByNumberKeyup",
+            "designerId": "bf5b4a7c-2b40-40e6-8b88-cc9c619aabcf"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchbynumber",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onSearchByNumberPaste",
+                "implHandler": [
+                    "",
+                    "this.getApplication().getController('Func').searchByNumber('searchByNumber', textfield);",
+                    ""
+                ],
+                "name": "paste"
+            },
+            "name": "onSearchByNumberPaste",
+            "designerId": "780bd2b0-83d0-4274-aac3-8b5a52f26a70"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchbynumberlist",
+                "designer|targetType": "SearchByNumberList",
+                "fn": "onSearchByNumberListItemTap",
+                "implHandler": [
+                    "",
+                    "this.getApplication().getController('Func').callAndEmailFn(record);",
+                    ""
+                ],
+                "name": "itemtap"
+            },
+            "name": "onSearchByNumberListItemTap",
+            "designerId": "81aecd11-f27b-4ecc-af65-1008a6bef543"
+        }
+    ]
+}

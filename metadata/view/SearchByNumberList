@@ -1,0 +1,65 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "searchbynumberlist",
+        "designer|userClassName": "SearchByNumberList",
+        "emptyText": "Няма данни!",
+        "store": "searchByNumber"
+    },
+    "name": "SearchByNameList1",
+    "designerId": "5ef5e881-0ff1-4975-a08a-e1ec84ad47e9",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top"
+            },
+            "name": "MyToolbar2",
+            "designerId": "c06118ea-6c4d-4064-b053-7882415cfe29",
+            "cn": [
+                {
+                    "type": "Ext.field.Search",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": true,
+                        "id": "searchbynumber",
+                        "itemId": null,
+                        "label": null
+                    },
+                    "name": "MySearchField1",
+                    "designerId": "eacde254-cee5-4abc-a200-510eab11f264"
+                }
+            ]
+        },
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div><h1>{Titla} {Name} {Prezime} {Familia}</h1></div><div>{Podelenie}</div><div><p>{Dlagnost}, тел. {GSM}</p></div><div><p>{Email}</p></div"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "e24e866e-356d-4dca-8580-eae3279796a6"
+        }
+    ]
+}

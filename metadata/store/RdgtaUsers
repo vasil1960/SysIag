@@ -1,0 +1,48 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "autoLoad": true,
+        "designer|userAlias": "rdgtausers",
+        "designer|userClassName": "RdgtaUsers",
+        "model": "userPhone",
+        "storeId": "RdgtaUsers"
+    },
+    "name": "iagPhone1",
+    "designerId": "cfe28b93-c458-4a0c-8748-b3e913b6be2d",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "extraParams": [
+                    "{podid:102}"
+                ],
+                "recordParam": null,
+                "url": "https://system.iag.bg/iagSys/resources/php/rdgusers.php"
+            },
+            "name": "MyJsonPProxy",
+            "designerId": "a1d77456-7223-4a41-8cd6-4d030a5716b7",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader",
+                    "designerId": "c4b1d96f-9cc4-4553-91d3-d5f141f5785c"
+                }
+            ]
+        }
+    ]
+}

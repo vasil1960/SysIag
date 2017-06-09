@@ -1,0 +1,27 @@
+
+
+@import 'sencha-touch/default';
+@import 'sencha-touch/default/all';
+
+
+p {
+    font-size: 75%;
+    color: grey;
+}
+
+.x-layout-box-item.x-sized > .x-inner, .x-layout-box-item.x-sized > .x-body, .x-layout-box-item.x-sized > .x-dock-outer {
+        text-align: center;
+    /* color: #0398ff; */
+    background-color: gainsboro;
+    border-bottom-width: thin;
+    border-color: blanchedalmond;
+}
+
+.x-field .x-field-input, .x-field .x-input-el {
+    text-align: center;
+}
+
+.x-toolbar .x-field {
+
+        width: 16em;
+}

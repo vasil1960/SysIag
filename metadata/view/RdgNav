@@ -1,0 +1,30 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "rdgnav",
+        "designer|userClassName": "RdgNav"
+    },
+    "name": "MyNavigationView",
+    "designerId": "32ac8005-aa5c-4134-a836-d2ec295c1122",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "РДГ, ДПП, ЛЗС"
+            },
+            "name": "rdgtalist1",
+            "designerId": "0dbee77e-a0e5-42af-ad1c-0fa423b37aa5",
+            "masterInstanceId": "bc399cf3-d4e8-4f07-918c-22e6d00f354d"
+        }
+    ]
+}

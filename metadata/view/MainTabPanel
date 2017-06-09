@@ -1,0 +1,93 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "activeItem": null,
+        "designer|initialView": true,
+        "designer|userAlias": "maintabpanel",
+        "designer|userClassName": "MainTabPanel"
+    },
+    "name": "MyTabPanel",
+    "designerId": "e7a13762-a887-45d7-a0e2-04c2404a9296",
+    "cn": [
+        {
+            "type": "Ext.tab.Bar",
+            "reference": {
+                "name": "tabBar",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "bottom"
+            },
+            "name": "MyTabBar",
+            "designerId": "f6edcf92-4c37-4e82-b8c9-3929c69672cd"
+        },
+        {
+            "type": "Ext.Container",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "home",
+                "layout": "fit",
+                "title": "Начало"
+            },
+            "name": "MyContainer3",
+            "designerId": "5cf0e0a5-cc3e-4f6b-b80b-373b5f8149d6",
+            "cn": [
+                {
+                    "type": "Ext.Toolbar",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "docked": "top",
+                        "title": "https://system.iag.bg"
+                    },
+                    "name": "MyToolbar",
+                    "designerId": "fe8223f8-98f0-49bb-9824-55421e03da7e"
+                },
+                {
+                    "type": "Ext.Img",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": true,
+                        "height": 518,
+                        "src": "resources/images/Home.png",
+                        "width": 318
+                    },
+                    "name": "MyImg",
+                    "designerId": "b9818fee-c9b7-4b41-aa8e-3fceac40997d"
+                }
+            ]
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "iconCls": "team",
+                "title": "Телефони"
+            },
+            "name": "phonestabpanel",
+            "designerId": "18767e53-1832-4370-9f5f-091e6316924c",
+            "masterInstanceId": "1e0dd5fc-2b21-4704-9039-b0354bc8404d"
+        }
+    ]
+}

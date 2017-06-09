@@ -1,0 +1,30 @@
+{
+    "type": "Ext.navigation.View",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "rdgdgsnav",
+        "designer|userClassName": "RdgDgsNav"
+    },
+    "name": "MyNavigationView",
+    "designerId": "a12b9b87-97a2-4c87-a4d9-6454130ceaf1",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Регионални дирекции"
+            },
+            "name": "rdgtadgslist1",
+            "designerId": "19311ddc-9fc5-40a8-b97c-4c0e0f02ecb9",
+            "masterInstanceId": "437260de-d17c-40a9-82f7-9cca11c0ed75"
+        }
+    ]
+}

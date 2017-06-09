@@ -1,0 +1,73 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "phonestabpanel",
+        "designer|userClassName": "PhonesTabPanel",
+        "docked": null
+    },
+    "name": "MyTabPanel",
+    "designerId": "1e0dd5fc-2b21-4704-9039-b0354bc8404d",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "ИАГ"
+            },
+            "name": "iagphonelist",
+            "designerId": "82c1c7e7-1d16-4f99-af4c-19432675ffe4",
+            "masterInstanceId": "33d610b5-3eee-4145-b2a0-06cad3cc5e7e"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "РДГ"
+            },
+            "name": "rdgnav",
+            "designerId": "18476e44-91b3-44d8-b7bc-bb2d35b06c70",
+            "masterInstanceId": "32ac8005-aa5c-4134-a836-d2ec295c1122"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "ДГС"
+            },
+            "name": "rdgdgsnav",
+            "designerId": "5bdcceb8-22e1-403d-bf6e-69e42bd700d8",
+            "masterInstanceId": "a12b9b87-97a2-4c87-a4d9-6454130ceaf1"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "Търсене ..."
+            },
+            "name": "searchtabpanel",
+            "designerId": "b61874cc-a5cb-47f4-b745-1ba3b804a782",
+            "masterInstanceId": "f4b608f5-450c-41e8-88e0-12076b7f3cbf"
+        }
+    ]
+}

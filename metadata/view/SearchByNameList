@@ -1,0 +1,65 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "searchbynamelist",
+        "designer|userClassName": "SearchByNameList",
+        "emptyText": "Няма данни!",
+        "store": "searchByName"
+    },
+    "name": "DgsUsersList1",
+    "designerId": "e6cf3ec6-c3ca-475d-a469-6a633add733b",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top"
+            },
+            "name": "MyToolbar2",
+            "designerId": "af97483e-d1d2-4273-8823-f27998233ea0",
+            "cn": [
+                {
+                    "type": "Ext.field.Search",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": true,
+                        "id": "searchbyname",
+                        "itemId": null,
+                        "label": null
+                    },
+                    "name": "MySearchField1",
+                    "designerId": "07dc0f76-4396-4c31-b5f2-29205a8efc8e"
+                }
+            ]
+        },
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div><h1>{Titla} {Name} {Prezime} {Familia}</h1></div><div>{Podelenie}</div><div><p>{Dlagnost}, тел. {GSM}</p></div><div><p>{Email}</p></div"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "17bdc11a-fc5a-48aa-8970-fc70996ce83c"
+        }
+    ]
+}

@@ -1,0 +1,77 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "cls": [
+            "tpl-a5wfn89s"
+        ],
+        "designer|userAlias": "iagphonelist",
+        "designer|userClassName": "iagPhoneList",
+        "docked": null,
+        "emptyText": "Няма данни!",
+        "grouped": null,
+        "html": null,
+        "id": null,
+        "itemId": "iagphonelist",
+        "padding": null,
+        "store": "iagPhone"
+    },
+    "name": "MyList",
+    "designerId": "33d610b5-3eee-4145-b2a0-06cad3cc5e7e",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "iagPhoneTpl",
+                "implHandler": [
+                    "<div><h1>{Titla} {Name} {Prezime} {Familia}</h1></div><div><p>{Dlagnost}, тел. {GSM}</p></div><div><p>{Email}</p></div>"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "8abc4900-ecb5-49b9-984b-d2912a906088"
+        },
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "itemId": "searchToolbar",
+                "padding": 5
+            },
+            "name": "MyToolbar1",
+            "designerId": "9116b900-3a6d-43c0-9884-137f5ce609a2",
+            "cn": [
+                {
+                    "type": "Ext.field.Search",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": true,
+                        "id": "iagsearchfield",
+                        "itemId": null,
+                        "label": null,
+                        "name": "mysearchfield"
+                    },
+                    "name": "MySearchField",
+                    "designerId": "db7ecc42-094e-42d0-a8a6-342ce5d959a9"
+                }
+            ]
+        }
+    ]
+}

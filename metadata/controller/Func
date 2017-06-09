@@ -1,0 +1,368 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "func",
+        "designer|userClassName": "Func"
+    },
+    "name": "MyController",
+    "designerId": "94b43113-e1fe-401a-a401-38b0e6265f4a",
+    "cn": [
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "store"
+                ],
+                "fn": "loadStore",
+                "implHandler": [
+                    "Ext.Viewport.setMasked({xtype:'loadmask', message:'Зареждам ...', indicator:true });",
+                    "",
+                    "var store = Ext.getStore(store);",
+                    "",
+                    "store.setAutoLoad('false');",
+                    "",
+                    "store.clearFilter();",
+                    "",
+                    "store.load({",
+                    "    callback: function(records, operation, success) {",
+                    "        if(success)",
+                    "        {",
+                    "            Ext.Viewport.setMasked(false);",
+                    "        } else {",
+                    "            Ext.Viewport.setMasked(false);",
+                    "            Ext.Msg.alert('Събщение', 'Проверете връзката с интернет и рестартирайте приложението', Ext.emptyFn);",
+                    "        }",
+                    "    }",
+                    "});"
+                ]
+            },
+            "name": "loadStore",
+            "designerId": "0c636654-f791-40c2-95ab-6dfc8e14dcaa"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "textfield",
+                    "store",
+                    "name",
+                    "familia"
+                ],
+                "fn": "searchOnNameAndFamilia",
+                "implHandler": [
+                    "",
+                    "var value = textfield.getValue(),\t// Search value",
+                    "    store = Ext.getStore(store);\t// People store",
+                    "",
+                    "// Clear current filter if less than 2",
+                    "if (value.length === 0) {",
+                    "    store.clearFilter();",
+                    "}",
+                    "",
+                    "// Search term must be at least 2 characters",
+                    "if (value.length < 2) {",
+                    "    return;",
+                    "}",
+                    "",
+                    "// Clear any current filters",
+                    "store.clearFilter();",
+                    "",
+                    "// Check if a value is provided",
+                    "if (value) {",
+                    "",
+                    "    // Spit value to get multiple terms",
+                    "    var terms = value.split(' ');",
+                    "",
+                    "    // Convert each search string into regex",
+                    "    var regexps = [];",
+                    "    Ext.each(terms, function(term) {",
+                    "",
+                    "        // Ensure term is not space and at least 2 characters",
+                    "        if (term && term.length > 1) {",
+                    "            regexps.push(new RegExp(term, 'i')); // Case-insensitive regex",
+                    "        }",
+                    "",
+                    "    });",
+                    "",
+                    "    // Filter records",
+                    "    store.filter(function(record) {",
+                    "",
+                    "        var matches = [];",
+                    "",
+                    "        // Check each of the regular expressions",
+                    "        Ext.each(regexps, function(regex) {",
+                    "",
+                    "            var match = record.get(name).match(regex) || record.get(familia).match(regex);",
+                    "            matches.push(match);",
+                    "",
+                    "        });",
+                    "",
+                    "        // If nothing was found, return false to not show",
+                    "        if (regexps.length > 1 && matches.indexOf(false) != -1) {",
+                    "            return false;",
+                    "        } else {",
+                    "            // Else return to show",
+                    "            return matches[0];",
+                    "        }",
+                    "",
+                    "    });",
+                    "}"
+                ]
+            },
+            "name": "searchOnNameAndFamilia",
+            "designerId": "5760c6fa-01c8-4750-928b-54f01cb5a7f7"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "record"
+                ],
+                "fn": "callAndEmailFn",
+                "implHandler": [
+                    "",
+                    "Ext.Viewport.setMasked(false);",
+                    "",
+                    "var gsm = record.get('GSM'),",
+                    "    email = record.get('Email'),",
+                    "    fullname = record.get('Titla') + ' ' + record.get('Name') + ' ' + record.get('Familia'),",
+                    "    pod = record.get('Podelenie'),",
+                    "    dlagnost = record.get('Dlagnost'),",
+                    "    EGN = record.get('EGN'),",
+                    "",
+                    "    //без ЕГН",
+                    "    text = '<P>' + dlagnost + '</p><p>' + pod + '</p><p>' + gsm + '</p><p>' + email + '</p>';",
+                    "",
+                    "    // с ЕГН",
+                    "    //text = '<P>ЕГН: ' + EGN + '</p><P>' + dlagnost + '</p><p>' + pod + '</p><p>' + gsm + '</p><p>' + email + '</p>';",
+                    "",
+                    "",
+                    "Ext.Msg.show({",
+                    "",
+                    "    title: fullname,",
+                    "    message: this.changeMessageTextAndQuestion(gsm, email, text),",
+                    "    width: 300,",
+                    "    buttons:[",
+                    "        { text: 'Избери',    itemId: 'call', hidden: this.hideButton(gsm) },",
+                    "        { text: 'Email',  itemId: 'email', hidden: this.hideButton(email) },",
+                    "        { text: 'Затвори', itemId: 'cancel' }",
+                    "    ],",
+                    "",
+                    "    fn: function(buttonId) {",
+                    "",
+                    "        if (buttonId == 'call'){",
+                    "            document.location.href = 'tel:'+record.get('GSM');",
+                    "            //document.open('tel:'+record.get('GSM'), '_system');",
+                    "        } else if (buttonId == 'email'){",
+                    "            document.location.href = 'mailto:'+record.get('Email');",
+                    "        } else if (buttonId == 'cancel'){",
+                    "            //console.log('cancel');",
+                    "        } else {",
+                    "            alert('Има някакава грешка');",
+                    "        }",
+                    "    }",
+                    "});"
+                ]
+            },
+            "name": "callAndEmailFn",
+            "designerId": "5c1afcd0-6543-4196-8035-ef43e510a923"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "gsm",
+                    "email",
+                    "text"
+                ],
+                "fn": "changeMessageTextAndQuestion",
+                "implHandler": [
+                    "if (gsm === '') {",
+                    "    return text + '<p>Няма въведен телефонен номер</p>';",
+                    "} else if ( (gsm === '') && (email === '')){",
+                    "    return text + '<p>Няма въведени телефонен номер и имейл</p>';",
+                    "} else if ( (gsm !== '') && (email === '')){",
+                    "    return text + '<p>Да избера ли номера ?</p>';",
+                    "} else if ( (gsm === '') && (email !== '')){",
+                    "    return text + '</p><p>Няма въведен телефон номер.</p><p>Можете да изпратите само имейл</p>';",
+                    "}else if ( (gsm !== '') && (email !== '')){",
+                    "    return text + '<p>Да избера ли номера или ще изпратите имейл ?</p>';",
+                    "} else {",
+                    "    alert('Има някаква грешка');",
+                    "}"
+                ]
+            },
+            "name": "changeMessageTextAndQuestion",
+            "designerId": "86ffca9b-7fa3-410c-879d-4751d5c25505"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "param"
+                ],
+                "fn": "hideButton",
+                "implHandler": [
+                    "",
+                    "if (param === ''){",
+                    "    return true;",
+                    "} else {",
+                    "    return false;",
+                    "}"
+                ]
+            },
+            "name": "hideButton",
+            "designerId": "9dcbfbf1-c3b2-4a6a-a81a-06ecfe40212a"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "store"
+                ],
+                "fn": "clearSearchField",
+                "implHandler": [
+                    "",
+                    "Ext.getStore(store).clearFilter();"
+                ]
+            },
+            "name": "clearSearchField",
+            "designerId": "b9f37220-b571-471d-a85d-c8ddd8898c04"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "store",
+                    "textfield"
+                ],
+                "fn": "searchByNumber",
+                "implHandler": [
+                    "var store = Ext.getStore(store),",
+                    "    value = textfield.getValue();",
+                    "",
+                    "store.clearFilter();",
+                    "store.currentPage = 1;",
+                    "",
+                    "",
+                    "if (value.length === 0) {",
+                    "    store.clearFilter();",
+                    "}",
+                    "",
+                    "if (value.length < 5) {",
+                    "    return;",
+                    "}",
+                    "",
+                    "",
+                    "if(value){",
+                    "",
+                    "    store.getProxy().setExtraParams({gsm:value});",
+                    "}",
+                    "",
+                    "store.load();"
+                ]
+            },
+            "name": "searchByNumber",
+            "designerId": "46d048b9-ca64-40fa-8391-4d1e85702f4b"
+        },
+        {
+            "type": "basicfunction",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|params": [
+                    "store",
+                    "textfield"
+                ],
+                "fn": "searchByName",
+                "implHandler": [
+                    "",
+                    "var store = Ext.getStore(\"searchByName\"),",
+                    "    value = textfield.getValue();",
+                    "",
+                    "store.clearFilter();",
+                    "store.currentPage = 1;",
+                    "",
+                    "",
+                    "if (value.length === 0) {",
+                    "    store.clearFilter();",
+                    "}",
+                    "",
+                    "if (value.length < 3) {",
+                    "    return;",
+                    "}",
+                    "",
+                    "",
+                    "if(value){",
+                    "",
+                    "",
+                    "    var val = value.split(' ');",
+                    "",
+                    "    if(val.length == 1){",
+                    "",
+                    "        store.getProxy().setExtraParams({Ime:val[0]});",
+                    "",
+                    "    }",
+                    "",
+                    "    if(val.length == 2){",
+                    "",
+                    "        store.getProxy().setExtraParams({Ime:val[0], Fam:val[1]});",
+                    "",
+                    "    }",
+                    "",
+                    "    console.log(val[0],val[1]);",
+                    "}",
+                    "",
+                    "",
+                    "store.load();",
+                    ""
+                ]
+            },
+            "name": "searchByName",
+            "designerId": "ea031582-0b73-46c7-b1c3-1f4f80ec89ca"
+        }
+    ]
+}

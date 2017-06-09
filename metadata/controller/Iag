@@ -1,0 +1,144 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "iag",
+        "designer|userClassName": "Iag",
+        "requires": [
+            "Ext.MessageBox"
+        ]
+    },
+    "name": "MyController",
+    "designerId": "93013ac6-25cf-4331-bfb1-51f9717cc1d9",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "iagphonelist",
+                "selector": "iagphonelist",
+                "xtype": null
+            },
+            "name": "iagphonelist",
+            "designerId": "a7943874-7694-484a-8646-dd1916659fde"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "iagsearchfield",
+                "selector": "#iagsearchfield"
+            },
+            "name": "iagsearchfield",
+            "designerId": "16711a45-dc2f-4a83-9dda-2b6acdd3f181"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onSearchfieldClearicontap",
+                "implHandler": [
+                    "",
+                    "this.getApplication().getController('Func').clearSearchField('iagPhone');",
+                    ""
+                ],
+                "name": "clearicontap"
+            },
+            "name": "onSearchfieldClearicontap",
+            "designerId": "0785af23-3732-48b3-9ba0-8b529ec24b24"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "phones",
+                "selector": "maintabpanel #phones"
+            },
+            "name": "phones",
+            "designerId": "cd2bb310-9b1c-491e-92c4-ff5652e9111d"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "iagphonelist",
+                "designer|targetType": "iagPhoneList",
+                "fn": "onIagphonelistItemTap",
+                "implHandler": [
+                    "",
+                    "this.getApplication().getController('Func').callAndEmailFn(record);",
+                    ""
+                ],
+                "name": "itemtap"
+            },
+            "name": "onIagphonelistItemTap",
+            "designerId": "26a586fa-5629-4ab4-88bf-c421246ca70f"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "iagphonelist",
+                "designer|targetType": "iagPhoneList",
+                "fn": "onIagphonelistShow",
+                "implHandler": [
+                    "console.log('show');",
+                    "",
+                    "this.getApplication().getController('Func').loadStore('iagPhone');"
+                ],
+                "name": "show"
+            },
+            "name": "onIagphonelistShow",
+            "designerId": "1455cf86-9f86-46a9-b79a-09b301228c73"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "iagsearchfield",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onIagSearchfieldKeyup",
+                "implHandler": [
+                    "this.getApplication().getController('Func').searchOnNameAndFamilia(textfield,'iagPhone', 'Name', 'Familia');"
+                ],
+                "name": "keyup"
+            },
+            "name": "onIagSearchfieldKeyup",
+            "designerId": "cfacf794-b387-4a68-89da-e0766c03b78d"
+        }
+    ]
+}

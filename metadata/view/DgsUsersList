@@ -1,0 +1,65 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "dgsuserslist",
+        "designer|userClassName": "DgsUsersList",
+        "emptyText": "Няма данни!",
+        "store": "RdgtaUsers"
+    },
+    "name": "RdgtaUsersList1",
+    "designerId": "62b2e57f-607d-48fe-ab51-38a01affdc0d",
+    "cn": [
+        {
+            "type": "Ext.Toolbar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top"
+            },
+            "name": "MyToolbar2",
+            "designerId": "95730d97-724d-4814-ae19-3dbf9892e95d",
+            "cn": [
+                {
+                    "type": "Ext.field.Search",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "centered": true,
+                        "id": null,
+                        "itemId": null,
+                        "label": null
+                    },
+                    "name": "MySearchField1",
+                    "designerId": "aa20f9c2-a4f4-4323-8dac-595484fa5f17"
+                }
+            ]
+        },
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div><h1>{Titla} {Name} {Prezime} {Familia}</h1></div><div><p>{Dlagnost}, тел. {GSM}</p></div><div><p>{Email}</p></div"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "2f379d81-5028-4dc5-ad49-cf65e35ce409"
+        }
+    ]
+}

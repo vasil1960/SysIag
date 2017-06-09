@@ -1,0 +1,35 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "rdgtalist",
+        "designer|userClassName": "RdgtaList",
+        "emptyText": "Няма данни!",
+        "onItemDisclosure": true,
+        "store": "RdgtaStore"
+    },
+    "name": "MyList",
+    "designerId": "bc399cf3-d4e8-4f07-918c-22e6d00f354d",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div>{Pod_NameBg}</div>"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "37e33ad4-9753-45f2-a077-ea19dcab691e"
+        }
+    ]
+}

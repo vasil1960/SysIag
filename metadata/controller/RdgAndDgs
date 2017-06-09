@@ -1,0 +1,350 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "rdganddgs",
+        "designer|userClassName": "RdgAndDgs"
+    },
+    "name": "MyController",
+    "designerId": "385ebad5-3097-47bf-8bf4-871c2f9b2278",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "rdgnav",
+                "selector": "rdgnav"
+            },
+            "name": "rdgnav",
+            "designerId": "0a4f0944-1c1d-46d4-814e-0cb53f53b6a8"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "rdgtalist",
+                "selector": "rdgtalist"
+            },
+            "name": "rdgtalist",
+            "designerId": "3b50daf6-d8e0-4655-9f44-4400306649e6"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "rdgnav",
+                "designer|targetType": "RdgNav",
+                "fn": "onRdgNavShow",
+                "implHandler": [
+                    "",
+                    "this.getApplication().getController('Func').loadStore('RdgtaStore');",
+                    "",
+                    "console.log('rdgta tab show');"
+                ],
+                "name": "show"
+            },
+            "name": "onRdgNavShow",
+            "designerId": "ce92145c-92cb-41e5-a1b7-a4feb2ef0eb9"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "rdgtalist",
+                "designer|targetType": "RdgtaList",
+                "fn": "onRdgListItemTap",
+                "implHandler": [
+                    "",
+                    "var store = Ext.getStore('RdgtaUsers');",
+                    "",
+                    "store.getProxy().setExtraParams({podid: record.get('Pod_Id')});",
+                    "",
+                    "this.getApplication().getController('Func').loadStore(store);",
+                    "",
+                    "this.getRdgnav().push({",
+                    "    xtype:'rdgtauserslist',",
+                    "    title:record.get('Pod_NameBg')",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onRdgListItemTap",
+            "designerId": "35c6534f-b7be-4801-b10b-a7765edc0288"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "rdgtauserslist",
+                "selector": "rdgtauserslist"
+            },
+            "name": "rdgtauserslist",
+            "designerId": "41e13c1a-663c-45e3-bd9c-91ca075ca0b7"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "rdgtauserslist",
+                "designer|targetType": "RdgtaUsersList",
+                "fn": "onRdgtaUsersListItemTap",
+                "implHandler": [
+                    "",
+                    "",
+                    "this.getApplication().getController('Func').callAndEmailFn(record);"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onRdgtaUsersListItemTap",
+            "designerId": "8c4e8c72-e070-4ee9-a738-df41ce4a9b8a"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onSearchfieldClearicontap",
+                "implHandler": [
+                    "",
+                    "",
+                    "this.getApplication().getController('Func').clearSearchField('RdgtaUsers');",
+                    "",
+                    ""
+                ],
+                "name": "clearicontap"
+            },
+            "name": "onSearchfieldClearicontap",
+            "designerId": "56c370e7-fddd-42ee-92af-1f2689e02e61"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "searchfield",
+                "selector": "searchfield"
+            },
+            "name": "searchfield",
+            "designerId": "830e0bb6-5fb4-4d1f-b6d0-95bf414596ae"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "searchfield",
+                "designer|targetType": "Ext.field.Search",
+                "fn": "onSearchfieldKeyup",
+                "implHandler": [
+                    "",
+                    "this.getApplication().getController('Func').searchOnNameAndFamilia(textfield,'RdgtaUsers', 'Name', 'Familia');"
+                ],
+                "name": "keyup"
+            },
+            "name": "onSearchfieldKeyup",
+            "designerId": "e575c493-40ca-47fb-9830-2019b514da2e"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "rdgdgsnav",
+                "selector": "rdgdgsnav"
+            },
+            "name": "rdgdgsnav",
+            "designerId": "0433b4ba-a3be-4abe-ad0a-100082d5aa9d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "rdgtsdgslist",
+                "selector": "rdgtadgslist"
+            },
+            "name": "rdgtsdgslist",
+            "designerId": "9d0011d3-9dc9-4e23-a7cf-e49bb2a15cb4"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "rdgdgsnav",
+                "designer|targetType": "RdgDgsNav",
+                "fn": "onRdgDgsNavShow",
+                "implHandler": [
+                    "",
+                    "console.log('hi');",
+                    "",
+                    "this.getApplication().getController('Func').loadStore('RdgtaStore');",
+                    "",
+                    ""
+                ],
+                "name": "show"
+            },
+            "name": "onRdgDgsNavShow",
+            "designerId": "1b28feb4-81c2-4b56-8698-80a8f27f6b6d"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "dgslist",
+                "selector": "dgslist"
+            },
+            "name": "dgslist",
+            "designerId": "64de65d4-d4fd-4861-a79d-69624abeda56"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "rdgtadgslist",
+                "designer|targetType": "RdgtaDgsList",
+                "fn": "onRdgtaDgsListTap",
+                "implHandler": [
+                    "",
+                    "console.log(record.get('Pod_Id'));",
+                    "",
+                    "var store = Ext.getStore('DgsStore');",
+                    "",
+                    "store.getProxy().setExtraParams({glavpod:record.get('Pod_Id')});",
+                    "",
+                    "this.getApplication().getController('Func').loadStore('DgsStore');",
+                    "",
+                    "this.getRdgdgsnav().push({",
+                    "    xtype:'dgslist',",
+                    "    title:record.get('Pod_NameBg')",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onRdgtaDgsListTap",
+            "designerId": "efbab8eb-3fce-4816-bc53-63af170f6200"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "dgslist",
+                "designer|targetType": "DgsList",
+                "fn": "onDgsListItemTap",
+                "implHandler": [
+                    "",
+                    "console.log('tiptap');",
+                    "",
+                    "var store = Ext.getStore('RdgtaUsers');",
+                    "",
+                    "store.getProxy().setExtraParams({podid: record.get('Pod_Id')});",
+                    "",
+                    "this.getApplication().getController('Func').loadStore(store);",
+                    "",
+                    "this.getRdgdgsnav().push({",
+                    "    xtype:'dgsuserslist',",
+                    "    title:record.get('Pod_NameBg')",
+                    "});"
+                ],
+                "name": "itemtap"
+            },
+            "name": "onDgsListItemTap",
+            "designerId": "5ddf2b84-612b-4046-977c-09edfe23fbc1"
+        },
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "dgsuserslist",
+                "selector": "dgsuserslist"
+            },
+            "name": "dgsuserslist",
+            "designerId": "15e59546-2f26-48f7-aa55-8fdc7aca0fb3"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "dgsuserslist",
+                "designer|targetType": "DgsUsersList",
+                "fn": "onDgsUsersListTap",
+                "implHandler": [
+                    "",
+                    "this.getApplication().getController('Func').callAndEmailFn(record);",
+                    ""
+                ],
+                "name": "itemtap"
+            },
+            "name": "onDgsUsersListTap",
+            "designerId": "ff601b4c-31af-4a8d-b9bf-4da40afb4963"
+        }
+    ]
+}

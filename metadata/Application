@@ -1,0 +1,46 @@
+{
+    "type": "Ext.app.Application",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "controllers": [
+            "Iag",
+            "RdgAndDgs",
+            "Func",
+            "Search"
+        ],
+        "models": [
+            "userPhone",
+            "PodeleniaModel"
+        ],
+        "name": "sysIag",
+        "stores": [
+            "iagPhone",
+            "RdgtaStore",
+            "RdgtaUsers",
+            "DgsStore",
+            "searchByName",
+            "searchByNumber"
+        ],
+        "views": [
+            "MainTabPanel",
+            "iagPhoneList",
+            "PhonesTabPanel",
+            "RdgNav",
+            "RdgtaList",
+            "RdgtaUsersList",
+            "RdgDgsNav",
+            "RdgtaDgsList",
+            "DgsList",
+            "DgsUsersList",
+            "SearchByNameList",
+            "SearchTabPanel",
+            "SearchByNumberList"
+        ]
+    },
+    "name": "Application",
+    "designerId": "application"
+}

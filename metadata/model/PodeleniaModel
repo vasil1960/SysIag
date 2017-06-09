@@ -1,0 +1,80 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "PodeleniaModel"
+    },
+    "name": "MyModel",
+    "designerId": "ac96dae5-02d3-4b25-b53c-21932d321453",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "ID"
+            },
+            "name": "field12",
+            "designerId": "9e717eb1-2d97-4c35-a5c9-157be26e41a5"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Pod_NameBg"
+            },
+            "name": "field13",
+            "designerId": "6fedbe89-03ac-49f5-b6ac-c7b00af5c9d7"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Pod_Tel"
+            },
+            "name": "field14",
+            "designerId": "9de1b6ae-bf80-4fdc-bee3-ee62fc5e2482"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Pod_Id"
+            },
+            "name": "field15",
+            "designerId": "aa054a2f-1ed0-44b4-be09-5c6f15182c3e"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Glav_Pod"
+            },
+            "name": "field16",
+            "designerId": "2f2df7e0-96bc-46bd-aae3-a823c59cc76d"
+        }
+    ]
+}

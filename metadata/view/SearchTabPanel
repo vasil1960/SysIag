@@ -1,0 +1,44 @@
+{
+    "type": "Ext.tab.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "searchtabpanel",
+        "designer|userClassName": "SearchTabPanel"
+    },
+    "name": "MyTabPanel",
+    "designerId": "f4b608f5-450c-41e8-88e0-12076b7f3cbf",
+    "cn": [
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "По име, фамилия"
+            },
+            "name": "searchbynamelist1",
+            "designerId": "74dc19fc-8331-4706-82d5-5adf1d2493b9",
+            "masterInstanceId": "e6cf3ec6-c3ca-475d-a469-6a633add733b"
+        },
+        {
+            "type": "linkedinstance",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": "По тел. номер"
+            },
+            "name": "searchbynumberlist",
+            "designerId": "fc62b305-2820-4ea0-9101-95fc1eea50af",
+            "masterInstanceId": "5ef5e881-0ff1-4975-a08a-e1ec84ad47e9"
+        }
+    ]
+}

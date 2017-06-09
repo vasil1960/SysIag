@@ -1,0 +1,35 @@
+{
+    "type": "Ext.dataview.List",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "dgslist",
+        "designer|userClassName": "DgsList",
+        "emptyText": "Няма данни!",
+        "onItemDisclosure": true,
+        "store": "DgsStore"
+    },
+    "name": "RdgtaList1",
+    "designerId": "b9996ad1-8778-4ee9-8f3f-8607e28c1c20",
+    "cn": [
+        {
+            "type": "Ext.XTemplate",
+            "reference": {
+                "name": "itemTpl",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|displayName": "itemTpl",
+                "implHandler": [
+                    "<div>{Pod_NameBg}</div>"
+                ]
+            },
+            "name": "itemTpl",
+            "designerId": "103ed708-349f-4e6f-a62c-370aa0f6a275"
+        }
+    ]
+}

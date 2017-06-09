@@ -1,0 +1,48 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "searchbyname",
+        "designer|userClassName": "searchByName",
+        "model": "userPhone",
+        "pageSize": null,
+        "storeId": "searchByName"
+    },
+    "name": "iagPhone1",
+    "designerId": "8af1acb0-381c-4231-a97b-e4d5fc65045b",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "timeout": null,
+                "url": "https://system.iag.bg/iagSys/resources/php/searchbyname.php"
+            },
+            "name": "MyJsonPProxy",
+            "designerId": "584fdd64-07f1-4d2c-b40f-77d693a1934f",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "rootProperty": null
+                    },
+                    "name": "MyJsonReader",
+                    "designerId": "f12917ac-dfa0-45c9-9a23-ce458a971110"
+                }
+            ]
+        }
+    ]
+}
