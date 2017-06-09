@@ -1,0 +1,93 @@
+{
+    "type": "Ext.Panel",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "loginpanel",
+        "designer|userClassName": "LoginPanel",
+        "padding": "50 0"
+    },
+    "name": "MyPanel",
+    "designerId": "2bf1f2fc-d2f2-4bbc-89bc-6f1e5171f2c8",
+    "cn": [
+        {
+            "type": "Ext.TitleBar",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "docked": "top",
+                "title": "https://system.iag.bg"
+            },
+            "name": "MyTitleBar",
+            "designerId": "eb377995-6b55-49c9-9178-81b27a2ff078"
+        },
+        {
+            "type": "Ext.form.FieldSet",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "title": null
+            },
+            "name": "MyFieldSet",
+            "designerId": "8387d66f-eb25-4aac-a199-74421345ae20",
+            "cn": [
+                {
+                    "type": "Ext.field.Text",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "txtUser",
+                        "label": "Потребител:",
+                        "labelWidth": "40%"
+                    },
+                    "name": "MyTextField",
+                    "designerId": "436a2507-b531-4d76-b2a6-2e7575daef6e"
+                },
+                {
+                    "type": "Ext.field.Password",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "id": "txtPass",
+                        "label": "Парола:",
+                        "labelWidth": "40%"
+                    },
+                    "name": "MyPasswordField",
+                    "designerId": "4151d727-c2c4-46b1-97c7-09aff32f1292"
+                }
+            ]
+        },
+        {
+            "type": "Ext.Button",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "id": "loginBtn",
+                "margin": "0 auto",
+                "maxWidth": "50%",
+                "text": "Вход"
+            },
+            "name": "MyButton",
+            "designerId": "7350774e-b55a-407b-a510-211d1a16a810"
+        }
+    ]
+}

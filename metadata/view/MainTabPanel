@@ -7,7 +7,6 @@
     "codeClass": null,
     "userConfig": {
         "activeItem": null,
-        "designer|initialView": true,
         "designer|userAlias": "maintabpanel",
         "designer|userClassName": "MainTabPanel"
     },

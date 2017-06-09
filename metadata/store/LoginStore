@@ -1,0 +1,42 @@
+{
+    "type": "jsonpstore",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "LoginStore",
+        "model": "PodeleniaModel",
+        "storeId": "LoginStore"
+    },
+    "name": "RdgtaStore1",
+    "designerId": "98fed8b8-71b8-45b9-aeb6-e5db2b531dc5",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.JsonP",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "url": "https://system.iag.bg/iagSys/resources/php/login.php"
+            },
+            "name": "MyJsonPProxy1",
+            "designerId": "095a436b-2730-4179-a614-dd25c9728084",
+            "cn": [
+                {
+                    "type": "Ext.data.reader.Json",
+                    "reference": {
+                        "name": "reader",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "name": "MyJsonReader1",
+                    "designerId": "eb0a1d2c-76e9-494a-9183-5cd8149baab5"
+                }
+            ]
+        }
+    ]
+}

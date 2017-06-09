@@ -1,0 +1,54 @@
+{
+    "type": "Ext.data.Model",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "LoginModel"
+    },
+    "name": "MyModel",
+    "designerId": "e948c30e-0e43-4d1f-8912-40a7171a61da",
+    "cn": [
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "username"
+            },
+            "name": "field17",
+            "designerId": "262b86f1-9c04-41cd-af65-b5c651f5c4eb"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "pass_sha"
+            },
+            "name": "field18",
+            "designerId": "69a017b2-375a-4ee2-95a4-c58401794038"
+        },
+        {
+            "type": "Ext.data.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "Active"
+            },
+            "name": "field19",
+            "designerId": "1d56310e-6e22-4245-9d08-3934af24f739"
+        }
+    ]
+}

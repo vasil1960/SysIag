@@ -670,11 +670,14 @@ Ext.ClassManager.addNameAlternateMappings({
   ],
   "sysIag.controller.Func": [],
   "sysIag.controller.Iag": [],
+  "sysIag.controller.Login": [],
   "sysIag.controller.RdgAndDgs": [],
   "sysIag.controller.Search": [],
+  "sysIag.model.LoginModel": [],
   "sysIag.model.PodeleniaModel": [],
   "sysIag.model.userPhone": [],
   "sysIag.store.DgsStore": [],
+  "sysIag.store.LoginStore": [],
   "sysIag.store.RdgtaStore": [],
   "sysIag.store.RdgtaUsers": [],
   "sysIag.store.iagPhone": [],
@@ -682,6 +685,7 @@ Ext.ClassManager.addNameAlternateMappings({
   "sysIag.store.searchByNumber": [],
   "sysIag.view.DgsList": [],
   "sysIag.view.DgsUsersList": [],
+  "sysIag.view.LoginPanel": [],
   "sysIag.view.MainTabPanel": [],
   "sysIag.view.PhonesTabPanel": [],
   "sysIag.view.RdgDgsNav": [],
@@ -1427,13 +1431,18 @@ Ext.ClassManager.addNameAliasMappings({
   "sysIag.controller.Iag": [
     "controller.iag"
   ],
+  "sysIag.controller.Login": [
+    "controller.login"
+  ],
   "sysIag.controller.RdgAndDgs": [
     "controller.rdganddgs"
   ],
   "sysIag.controller.Search": [],
+  "sysIag.model.LoginModel": [],
   "sysIag.model.PodeleniaModel": [],
   "sysIag.model.userPhone": [],
   "sysIag.store.DgsStore": [],
+  "sysIag.store.LoginStore": [],
   "sysIag.store.RdgtaStore": [],
   "sysIag.store.RdgtaUsers": [
     "store.rdgtausers"
@@ -1452,6 +1461,9 @@ Ext.ClassManager.addNameAliasMappings({
   ],
   "sysIag.view.DgsUsersList": [
     "widget.dgsuserslist"
+  ],
+  "sysIag.view.LoginPanel": [
+    "widget.loginpanel"
   ],
   "sysIag.view.MainTabPanel": [
     "widget.maintabpanel"

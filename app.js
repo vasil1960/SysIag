@@ -22,7 +22,8 @@ Ext.Loader.setConfig({
 Ext.application({
     models: [
         'userPhone',
-        'PodeleniaModel'
+        'PodeleniaModel',
+        'LoginModel'
     ],
     stores: [
         'iagPhone',
@@ -30,7 +31,8 @@ Ext.application({
         'RdgtaUsers',
         'DgsStore',
         'searchByName',
-        'searchByNumber'
+        'searchByNumber',
+        'LoginStore'
     ],
     views: [
         'MainTabPanel',
@@ -45,19 +47,21 @@ Ext.application({
         'DgsUsersList',
         'SearchByNameList',
         'SearchTabPanel',
-        'SearchByNumberList'
+        'SearchByNumberList',
+        'LoginPanel'
     ],
     controllers: [
         'Iag',
         'RdgAndDgs',
         'Func',
-        'Search'
+        'Search',
+        'Login'
     ],
     name: 'sysIag',
 
     launch: function() {
 
-        Ext.create('sysIag.view.MainTabPanel', {fullscreen: true});
+        Ext.create('sysIag.view.LoginPanel', {fullscreen: true});
     }
 
 });

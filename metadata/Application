@@ -10,11 +10,13 @@
             "Iag",
             "RdgAndDgs",
             "Func",
-            "Search"
+            "Search",
+            "Login"
         ],
         "models": [
             "userPhone",
-            "PodeleniaModel"
+            "PodeleniaModel",
+            "LoginModel"
         ],
         "name": "sysIag",
         "stores": [
@@ -23,7 +25,8 @@
             "RdgtaUsers",
             "DgsStore",
             "searchByName",
-            "searchByNumber"
+            "searchByNumber",
+            "LoginStore"
         ],
         "views": [
             "MainTabPanel",
@@ -38,7 +41,8 @@
             "DgsUsersList",
             "SearchByNameList",
             "SearchTabPanel",
-            "SearchByNumberList"
+            "SearchByNumberList",
+            "LoginPanel"
         ]
     },
     "name": "Application",

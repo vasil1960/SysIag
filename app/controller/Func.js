@@ -243,6 +243,12 @@ Ext.define('sysIag.controller.Func', {
 
         store.load();
 
+    },
+
+    checkConnection: function() {
+
+        alert(Ext.device.Connection.isOnline());
+
     }
 
 });

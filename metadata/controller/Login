@@ -1,0 +1,92 @@
+{
+    "type": "Ext.app.Controller",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userAlias": "login",
+        "designer|userClassName": "Login"
+    },
+    "name": "MyController",
+    "designerId": "e33864e2-48d2-4d1f-8137-87a080848ac4",
+    "cn": [
+        {
+            "type": "controllerref",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "ref": "loginBtn",
+                "selector": "#loginBtn"
+            },
+            "name": "loginBtn",
+            "designerId": "4933661d-2c21-4b7e-a3a7-1d35fb13f996"
+        },
+        {
+            "type": "controlleraction",
+            "reference": {
+                "name": "listeners",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "designer|controlQuery": "loginBtn",
+                "designer|targetType": "Ext.Button",
+                "fn": "onLoginButtonTap",
+                "implHandler": [
+                    "",
+                    "Ext.Viewport.setMasked({ xtype: 'loadmask', message: 'Зареждам ...', indicator:true});",
+                    "",
+                    "        var user = Ext.getCmp('txtUser').getValue();",
+                    "        var pass = Ext.getCmp('txtPass').getValue();",
+                    "",
+                    "",
+                    "        if(user.length > 0 && pass.length > 0)",
+                    "",
+                    "        {",
+                    "            var store = Ext.getStore('LoginStore');",
+                    "            store.load(",
+                    "                {",
+                    "                    params: {",
+                    "                        user: user,",
+                    "                        pass: pass",
+                    "                    },",
+                    "                    callback: function(records, operation, success) {",
+                    "",
+                    "                        if(success)",
+                    "                        {",
+                    "                            Ext.Viewport.setMasked(false);",
+                    "                            Ext.Viewport.animateActiveItem(Ext.create('sysIag.view.MainTabPanel'),{type:'flip',duration: 400});",
+                    "                            Ext.Viewport.setMasked(false);",
+                    "                            console.log('success');",
+                    "                        }",
+                    "                        else",
+                    "                        {",
+                    "                            Ext.Viewport.setMasked(false);",
+                    "                            Ext.Msg.alert('Събщение', 'Грешна парола или потребителско име.', Ext.emptyFn);",
+                    "                            console.log('unsuccess');",
+                    "                        }",
+                    "                    },",
+                    "                    scope: this",
+                    "                });",
+                    "",
+                    "        }",
+                    "        else",
+                    "        {",
+                    "            Ext.Msg.alert('Събщение', 'Полетата \"Потребител\" и \"Парола\" са задължителни за попълване', Ext.emptyFn);",
+                    "            Ext.Viewport.setMasked(false);",
+                    "        }",
+                    "",
+                    ""
+                ],
+                "name": "tap"
+            },
+            "name": "onLoginButtonTap",
+            "designerId": "d89e3b39-29d8-4fbd-a1e6-babb2c3cd2c6"
+        }
+    ]
+}
