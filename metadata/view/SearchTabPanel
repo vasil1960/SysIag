@@ -22,7 +22,7 @@
             "userConfig": {
                 "title": "По име, фамилия"
             },
-            "name": "searchbynamelist1",
+            "name": "searchbynamelist",
             "designerId": "74dc19fc-8331-4706-82d5-5adf1d2493b9",
             "masterInstanceId": "e6cf3ec6-c3ca-475d-a469-6a633add733b"
         },

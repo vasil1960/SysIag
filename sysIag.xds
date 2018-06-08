@@ -3,7 +3,7 @@
     "settings": {
         "cmd": {
             "license": "commercial",
-            "cmdVersion": "6.5.0.180",
+            "cmdVersion": "6.5.3.6",
             "frameworkVersion": "2.4.2.571"
         },
         "urlPrefix": "http://localhost:1841/",
@@ -26,8 +26,8 @@
         "generateArchitectVersion": true,
         "installStatus": "Not Installed",
         "lastBuildSelection": {
-            "value": "nativeBuild",
-            "display": "Native Build"
+            "value": "emulate",
+            "display": "Native Build & Emulate"
         }
     },
     "xdsVersion": "3.5.1",
@@ -81,7 +81,8 @@
             "1200067e-769c-41ec-bff3-41b1f4a8430c",
             "e0f4ec20-8116-47ab-8e5a-10f64a378db4",
             "19a54270-1c0e-408e-bdd0-dfbce4cbe025",
-            "b324c5ad-d611-4133-83c3-dd156b0f5d7e"
+            "b324c5ad-d611-4133-83c3-dd156b0f5d7e",
+            "5d4a671c-8c1f-4d5d-930f-c22c4e780015"
         ],
         "app": [
             "application"

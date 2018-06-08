@@ -9,7 +9,7 @@
             "config": {
                "id": "com.domain.sysIag",
                "name": "sysIag",
-               "platforms": "ios android"
+               "platforms": "android"
             }
          }
       }
