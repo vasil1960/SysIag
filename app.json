@@ -7,7 +7,7 @@
          "packager": "cordova",
          "cordova": {
             "config": {
-               "id": "com.domain.sysIag",
+               "id": "bg.iag.sysIag",
                "name": "sysIag",
                "platforms": "android"
             }
