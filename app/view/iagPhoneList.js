@@ -29,7 +29,7 @@ Ext.define('sysIag.view.iagPhoneList', {
         emptyText: 'Няма данни!',
         store: 'iagPhone',
         itemTpl: [
-            '<div><h1>{Titla} {Name} {Prezime} {Familia}</h1></div><div><p>{Dlagnost}, тел. {GSM}</p></div><div><p>{Email}</p></div>'
+            '<div><h1><b>{Titla} {Name} {Prezime} {Familia}</b></h1></div><div><p><small><i>{Dlagnost}, тел. {GSM}</i></small></p></div><div><p><small><i>{Email}</i></small></p></div>'
         ],
         items: [
             {

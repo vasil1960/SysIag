@@ -23,6 +23,7 @@ Ext.define('sysIag.view.RdgNav', {
     ],
 
     config: {
+        defaultBackButtonText: 'Обратно',
         items: [
             {
                 xtype: 'rdgtalist',

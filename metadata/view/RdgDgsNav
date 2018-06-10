@@ -6,6 +6,7 @@
     },
     "codeClass": null,
     "userConfig": {
+        "defaultBackButtonText": "Обратно",
         "designer|userAlias": "rdgdgsnav",
         "designer|userClassName": "RdgDgsNav"
     },
